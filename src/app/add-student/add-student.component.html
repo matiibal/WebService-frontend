@@ -1,0 +1,31 @@
+<!--suppress ALL -->
+<div class="form-style-6 form">
+  <h1>Dodaj studenta</h1>
+  <form>
+    <label>
+      <input type="text" name="name" [(ngModel)]="student.name" placeholder="Imię" />
+    </label>
+    <label>
+      <input type="text" name="surname" [(ngModel)]="student.surname" placeholder="Nazwisko"/>
+    </label>
+    <label>
+      <input type="text" name="index" [(ngModel)]="student.index" placeholder="Nr indeksu"/>
+    </label>
+    <label>
+      <input type="text" name="phoneNumber" [(ngModel)]="student.phoneNumber" placeholder="Nr telefonu"/>
+    </label>
+    <label>
+      <input type="text" name="city" [(ngModel)]="student.city" placeholder="ulica"/>
+    </label>
+    <label>
+      <input type="text" name="numberOfFlat" [(ngModel)]="student.numberOfFlat" placeholder="Numer domu"/>
+    </label>
+    <label>
+      <input type="text" name="postalCode" [(ngModel)]="student.postalCode" placeholder="Kod pocztowy"/>
+    </label>
+    <label>
+      <input type="text" name="town" [(ngModel)]="student.town" placeholder="Miasto"/>
+    </label>
+  </form>
+  <input type="submit" (click)="onSubmit()" value="Dodaj"/>
+</div>
