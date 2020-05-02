@@ -57,7 +57,7 @@
     <ng-container matColumnDef="Edytuj">
       <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let row">
-        <button class="editButton">Edytuj</button>
+        <button class="editButton" (click)="edit(row.id)">Edytuj</button>
       </td>
     </ng-container>
 
@@ -72,3 +72,4 @@
 
   </table>
 </div>
+

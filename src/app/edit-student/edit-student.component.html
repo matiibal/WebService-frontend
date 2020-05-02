@@ -1,0 +1,31 @@
+<!--suppress ALL -->
+<div class="form-style-6 form">
+  <h1>Edytuj dane studenta</h1>
+  <form>
+    <label>
+      <input type="text" name="name"git [(ngModel)]="student.name" placeholder="Imię" [value]="student?.name"/>
+    </label>
+    <label>
+      <input type="text" name="surname" [(ngModel)]="student.surname" placeholder="Nazwisko" [value]="student?.surname"/>
+    </label>
+    <label>
+      <input type="text" name="index" [(ngModel)]="student.index" placeholder="Nr indeksu" [value]="student?.index"/>
+    </label>
+    <label>
+      <input type="text" name="phoneNumber" [(ngModel)]="student.phoneNumber" placeholder="Nr telefonu" [value]="student?.phoneNumber"/>
+    </label>
+    <label>
+      <input type="text" name="city" [(ngModel)]="student.city" placeholder="ulica" [value]="student?.city"/>
+    </label>
+    <label>
+      <input type="text" name="numberOfFlat" [(ngModel)]="student.numberOfFlat" placeholder="Numer domu" [value]="student?.numberOfFlat"/>
+    </label>
+    <label>
+      <input type="text" name="postalCode" [(ngModel)]="student.postalCode" placeholder="Kod pocztowy" [value]="student?.postalCode"/>
+    </label>
+    <label>
+      <input type="text" name="town" [(ngModel)]="student.town" placeholder="Miasto" [value]="student?.town"/>
+    </label>
+  </form>
+  <input type="submit" (click)="update()" value="Zapisz zmiany"/>
+</div>

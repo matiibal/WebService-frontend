@@ -1,10 +1,11 @@
-import {AfterViewChecked, AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {AfterViewChecked, AfterViewInit, Component, Input, OnInit, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {Student, StudentService} from '../service/student.service';
 import {Observable} from 'rxjs';
 import {MatTableDataSource} from '@angular/material/table';
 import {NavigationEnd, Router} from '@angular/router';
+import {logger} from 'codelyzer/util/logger';
 
 @Component({
   selector: 'app-student',
@@ -15,10 +16,9 @@ export class StudentComponent implements OnInit, AfterViewInit {
   displayedColumns: string[] = ['Id', 'Imię', 'Nazwisko', 'Nr indeksu', 'Nr telefonu',
     'Ulica', 'Nr domu', 'Kod pocztowy', 'Miasto', 'Edytuj', 'Usuń'];
   dataSource;
-  students: Observable<Student[]>;
+  @Input() student: Student;
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
-
   constructor(private studentService: StudentService, private router: Router) {
   }
 
@@ -46,5 +46,9 @@ export class StudentComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.ngOnInit();
+  }
+
+  edit(id: number) {
+    this.router.navigate(['editStudent', id]);
   }
 }

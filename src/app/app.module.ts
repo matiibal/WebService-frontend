@@ -10,11 +10,13 @@ import { MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import { AddStudentComponent } from './add-student/add-student.component';
 import {FormsModule} from '@angular/forms';
+import { EditStudentComponent } from './edit-student/edit-student.component';
 @NgModule({
   declarations: [
     AppComponent,
     StudentComponent,
-    AddStudentComponent
+    AddStudentComponent,
+    EditStudentComponent
   ],
   imports: [
     BrowserModule,
